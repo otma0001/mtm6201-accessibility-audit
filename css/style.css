@@ -1,6 +1,5 @@
-
 html {
-  font-size: 16px;
+  font-size: 100%;
   box-sizing: border-box;
 }
 
@@ -16,9 +15,9 @@ body {
   line-height: 1.7;
 }
 
-
 *:focus {
-  outline: none;
+  outline: 3px solid #c8956c;
+  outline-offset: 3px;
 }
 
 a {
@@ -29,7 +28,6 @@ a:hover {
   color: #7a4a2a;
 }
 
-/* ── Header ─────────────────────────────────────────────────────────────── */
 .site-header {
   background: #2c1a0e;
   position: sticky;
@@ -93,11 +91,15 @@ nav a[aria-current="page"] {
 }
 
 @media (max-width: 640px) {
-  nav { display: none; }
-  .menu-toggle { display: block; }
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
-/* ── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -149,7 +151,6 @@ nav a[aria-current="page"] {
   color: #ffffff;
 }
 
-/* ── Sections ───────────────────────────────────────────────────────────── */
 .section {
   padding: 5rem 0;
 }
@@ -164,13 +165,12 @@ nav a[aria-current="page"] {
   padding: 0 1.5rem;
 }
 
-.section h4 {
+.section h2 {
   font-size: 1.75rem;
   margin: 0 0 2.5rem;
   color: #2c1a0e;
 }
 
-/* ── Cards ──────────────────────────────────────────────────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -183,7 +183,7 @@ nav a[aria-current="page"] {
   gap: 0.75rem;
 }
 
-.card h4 {
+.card h3 {
   font-size: 1.15rem;
   margin: 0;
 }
@@ -200,7 +200,6 @@ nav a[aria-current="page"] {
   letter-spacing: 0.04em;
 }
 
-/* ── Two column ─────────────────────────────────────────────────────────── */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -215,7 +214,7 @@ nav a[aria-current="page"] {
   display: block;
 }
 
-.story-text h4 {
+.story-text h2 {
   margin-bottom: 1rem;
 }
 
@@ -224,14 +223,13 @@ nav a[aria-current="page"] {
   margin-bottom: 1rem;
 }
 
-/* ── Contact ────────────────────────────────────────────────────────────── */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
 
-.contact-grid h4 {
+.contact-grid h2 {
   margin-bottom: 1rem;
 }
 
@@ -244,6 +242,10 @@ nav a[aria-current="page"] {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.contact-form label {
+  font-weight: bold;
 }
 
 .contact-form input,
@@ -267,13 +269,13 @@ nav a[aria-current="page"] {
   cursor: pointer;
   align-self: flex-start;
   font-family: inherit;
+  border: none;
 }
 
 .btn-submit:hover {
   background: #2c1a0e;
 }
 
-/* ── Footer ─────────────────────────────────────────────────────────────── */
 .site-footer {
   background: #2c1a0e;
   color: #e8d5c4;
@@ -315,7 +317,6 @@ nav a[aria-current="page"] {
   color: #8a6a54;
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
